@@ -1,12 +1,14 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 
+export const GRAPH_NODE_URL = process.env.REACT_APP_GRAPH_NODE_URL ?? `https://graph-node.reservoir.tools`
+
 export const healthClient = new ApolloClient({
   uri: 'https://api.thegraph.com/index-node/graphql',
   cache: new InMemoryCache(),
 })
 
 export const blockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/absctract-testnet/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/absctract-testnet/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -21,7 +23,7 @@ export const blockClient = new ApolloClient({
 })
 
 export const client = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/absctract-testnet/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/absctract-testnet/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -350,7 +352,7 @@ export const celoBlockClient = new ApolloClient({
 })
 
 export const abstractTestnetClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/absctract-testnet/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/absctract-testnet/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -378,7 +380,7 @@ export const abstractTestnetClient = new ApolloClient({
 })
 
 export const abstractTestnetBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/absctract-testnet/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/absctract-testnet/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -392,7 +394,7 @@ export const abstractTestnetBlockClient = new ApolloClient({
   },
 })
 export const zeroClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/zero/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/zero/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -420,7 +422,7 @@ export const zeroClient = new ApolloClient({
 })
 
 export const zeroBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/zero/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/zero/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -435,7 +437,7 @@ export const zeroBlockClient = new ApolloClient({
 })
 
 export const bobClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/bob/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/bob/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -463,7 +465,7 @@ export const bobClient = new ApolloClient({
 })
 
 export const bobBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/bob/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/bob/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -478,7 +480,7 @@ export const bobBlockClient = new ApolloClient({
 })
 
 export const cyberClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/cyber/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/cyber/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -506,7 +508,7 @@ export const cyberClient = new ApolloClient({
 })
 
 export const cyberBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/cyber/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/cyber/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -521,7 +523,7 @@ export const cyberBlockClient = new ApolloClient({
 })
 
 export const shapeClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/shape/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/shape/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -549,7 +551,7 @@ export const shapeClient = new ApolloClient({
 })
 
 export const shapeBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/shape/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/shape/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -564,7 +566,7 @@ export const shapeBlockClient = new ApolloClient({
 })
 
 export const redstoneClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/redstone/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -592,7 +594,7 @@ export const redstoneClient = new ApolloClient({
 })
 
 export const redstoneBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/redstone/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -607,7 +609,7 @@ export const redstoneBlockClient = new ApolloClient({
 })
 
 export const redstoneGarnetClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone-garnet/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/redstone-garnet/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -635,7 +637,7 @@ export const redstoneGarnetClient = new ApolloClient({
 })
 
 export const redstoneGarnetBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/redstone-garnet/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/redstone-garnet/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -650,7 +652,7 @@ export const redstoneGarnetBlockClient = new ApolloClient({
 })
 
 export const inkClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/ink/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/ink/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -678,7 +680,7 @@ export const inkClient = new ApolloClient({
 })
 
 export const inkBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/ink/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/ink/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -693,7 +695,7 @@ export const inkBlockClient = new ApolloClient({
 })
 
 export const abstractClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/abstract/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/abstract/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -721,7 +723,7 @@ export const abstractClient = new ApolloClient({
 })
 
 export const abstractBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/abstract/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/abstract/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -736,7 +738,7 @@ export const abstractBlockClient = new ApolloClient({
 })
 
 export const animeTestnetClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/anime-testnet/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/anime-testnet/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -764,7 +766,7 @@ export const animeTestnetClient = new ApolloClient({
 })
 
 export const animeTestnetBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/anime-testnet/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/anime-testnet/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -807,7 +809,7 @@ export const modeClient = new ApolloClient({
 })
 
 export const modeBlockClient = new ApolloClient({
-  uri: 'https://graph-node.internal.reservoir.tools/subgraphs/name/mode/blocks-subgraph',
+  uri: `${GRAPH_NODE_URL}/subgraphs/name/mode/blocks-subgraph`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
