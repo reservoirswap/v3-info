@@ -781,7 +781,7 @@ export const animeTestnetBlockClient = new ApolloClient({
 })
 
 export const modeClient = new ApolloClient({
-  uri: `${GRAPH_NODE_URL}/reservoir.tools/subgraphs/name/mode/v3-subgraph',
+  uri: `${GRAPH_NODE_URL}/reservoir.tools/subgraphs/name/mode/v3-subgraph`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
